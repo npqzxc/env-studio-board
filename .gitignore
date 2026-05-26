@@ -1,0 +1,5 @@
+target/
+data/*.sqlite3
+patch/*
+!patch/.gitkeep
+.DS_Store

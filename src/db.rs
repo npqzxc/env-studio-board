@@ -1,0 +1,2 @@
+use rusqlite::{Connection, Result};
+pub fn open() -> Result<Connection> { std::fs::create_dir_all("./data").ok(); let conn = Connection::open("./data/app.sqlite3")?; conn.execute_batch("CREATE TABLE IF NOT EXISTS boards (code TEXT PRIMARY KEY, name TEXT, summary TEXT, status TEXT, owner TEXT); CREATE TABLE IF NOT EXISTS work_items (id INTEGER PRIMARY KEY AUTOINCREMENT, board_code TEXT, title TEXT, stage TEXT, priority TEXT, due_date TEXT, details TEXT);")?; Ok(conn) }

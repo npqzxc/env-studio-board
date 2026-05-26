@@ -1,0 +1,1 @@
+{% extends "layout.html" %}{% block content %}<section class="card-grid">{% for board in boards %}<article class="card"><p class="eyebrow">{{ board.code }}</p><h3><a href="/boards/{{ board.code }}">{{ board.name }}</a></h3><p>{{ board.summary }}</p><div class="meta"><span>{{ board.status }}</span><span>{{ board.owner }}</span></div></article>{% endfor %}</section>{% endblock %}
