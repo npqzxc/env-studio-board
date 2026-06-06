@@ -1,5 +1,13 @@
 target/
 data/*.sqlite3
+data/*.sqlite3-shm
+data/*.sqlite3-wal
+data/*.sqlite3-journal
 patch/*
 !patch/.gitkeep
+*.log
+.env
+.env.*
+.vscode/
+.idea/
 .DS_Store
